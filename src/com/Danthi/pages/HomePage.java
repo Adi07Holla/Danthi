@@ -1,4 +1,4 @@
-package com.Danthi.pages;
+package Danthi.src.com.Danthi.pages;
 
 public class HomePage {
 
