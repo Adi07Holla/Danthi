@@ -1,4 +1,4 @@
-package Danthi.src.com.GenericFunctions;
+package com.GenericFunctions;
 
 import java.io.File;
 import java.io.IOException;
@@ -15,7 +15,6 @@ public class SampleListener implements ITestListener {
 
 	public static WebDriver driver;
 	
-	@override
 	public void OnTestFailure(ITestResult r) throws IOException
 	{
 		

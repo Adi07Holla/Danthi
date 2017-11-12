@@ -1,4 +1,4 @@
-package Danthi.src.com.GenericFunctions;
+package com.GenericFunctions;
 
 public class GenericFunctions {
 
