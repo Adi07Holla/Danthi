@@ -17,5 +17,7 @@ public static void main()
 			driver.get("https://danthi.in");
 			driver.getTitle();
 			List<WebElement>lst=driver.findElements(By.linkText("Home"));
+		
+		
 		}
 }
