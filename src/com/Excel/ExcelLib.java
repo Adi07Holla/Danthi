@@ -1,5 +1,7 @@
 package com.Excel;
 
+
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -31,10 +33,10 @@ public class ExcelLib {
 	Row row;
 	Cell cel;
 	String SheetName;
-	private int RowNum;
+	int RowNum;
 	
 	//function to open a file
-	public  FileInputStream getFileInputStream() throws FileNotFoundException
+	private FileInputStream getFileInputStream(String path) throws FileNotFoundException
 	{
 		return this.fis=new FileInputStream(path);
 	}
@@ -46,16 +48,17 @@ public class ExcelLib {
 	}
 	
 	//function to get workbook
-	public org.apache.poi.ss.usermodel.Workbook getWorkbook() throws EncryptedDocumentException, InvalidFormatException, IOException
+	public org.apache.poi.ss.usermodel.Workbook getWorkbook(String path2) throws EncryptedDocumentException, InvalidFormatException, IOException
 	{
+		
 		//read workbook
-		return this.wb=WorkbookFactory.create(getFileInputStream());
+		return this.wb=WorkbookFactory.create(getFileInputStream(path2));
 	}
 	
 	//function to access sheet
-	public Sheet getSheet()
+	public Sheet getSheet(String SheetName2)
 	{
-		return this.wb.getSheet(SheetName);
+		return this.wb.getSheet(SheetName2);
 		
 	}
 	
@@ -66,9 +69,10 @@ public class ExcelLib {
 	}
 	
 	//function to get row
-	public Row getRow()
+	public Row getRow(int RowNum)
 	{
-		return this.st.getRow(RowNum);
+		Row row =st.getRow(RowNum);
+		return row;
 	}
 		
 	//function to create cell
